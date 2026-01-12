@@ -65,7 +65,7 @@ export function Hero() {
           </Button>
 
           <p className="text-sm text-muted-foreground mt-4">
-            Demo mode — no real login required
+            Demo mode — no real login required (Arnav's data)
           </p>
         </div>
       </div>
