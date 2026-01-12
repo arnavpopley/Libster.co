@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const MAINTENANCE_MODE = true; // Change to true to take it offline for maintenance
+const MAINTENANCE_MODE = false; // Change to true to take it offline for maintenance
 
 const App = () => {
   if (MAINTENANCE_MODE) {
