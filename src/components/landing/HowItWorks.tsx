@@ -10,13 +10,13 @@ const steps = [
   {
     icon: Download,
     title: 'We fetch your data',
-    description: 'We pull your library entry/exit history directly from College systems. Nothing stored.',
+    description: "We pull your library entry/exit history directly from Imperial's systems. Nothing stored.",
     color: 'from-purple-500 to-pink-500',
   },
   {
     icon: BarChart3,
     title: 'See your stats',
-    description: 'Get beautiful visualizations of your study habits — streaks, patterns, marathon sessions.',
+    description: 'Get beautiful visualizations of your study habits.',
     color: 'from-primary to-emerald-400',
   },
 ];
