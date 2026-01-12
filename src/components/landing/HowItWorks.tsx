@@ -31,7 +31,7 @@ export function HowItWorks() {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Three simple steps to unlock your library recap experience
-          </p>q
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
