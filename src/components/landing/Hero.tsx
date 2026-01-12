@@ -58,7 +58,7 @@ export function Hero() {
               </>
             ) : (
               <>
-                Log in with Imperial
+                Click to view demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </>
             )}
