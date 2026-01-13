@@ -2,8 +2,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
@@ -11,6 +13,19 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const MAINTENANCE_MODE = false; // Change to true to take it offline for maintenance
+
+// Initialize Google Analytics
+ReactGA.initialize("G-F9Y1KTEZV8"); // Replace with your actual Measurement ID
+
+const AnalyticsTracker = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+  
+  return null;
+};
 
 const App = () => {
   if (MAINTENANCE_MODE) {
@@ -35,6 +50,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <AnalyticsTracker />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/dashboard" element={<Dashboard />} />
