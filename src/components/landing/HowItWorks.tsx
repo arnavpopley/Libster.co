@@ -10,7 +10,7 @@ const steps = [
   {
     icon: Download,
     title: 'We fetch your data',
-    description: "We pull your library entry/exit history directly from Imperial's systems. Nothing stored.",
+    description: "We pull your library data directly from Imperial's systems. Nothing stored.",
     color: 'from-purple-500 to-pink-500',
   },
   {
